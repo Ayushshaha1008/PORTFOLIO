@@ -6,16 +6,15 @@ on:
       - main
 
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
-      # 1️⃣ Checkout repository
+      # 1️⃣ Checkout code
       - uses: actions/checkout@v3
 
       # 2️⃣ Setup Node.js
@@ -29,16 +28,11 @@ jobs:
       # 4️⃣ Build production (dist/)
       - run: npm run build
 
-      # 5️⃣ Configure GitHub Pages
-      - name: Configure GitHub Pages
-        uses: actions/configure-pages@v3
-
-      # 6️⃣ Upload build folder (dist/)
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+      # 5️⃣ Deploy to GitHub Pages using the new official deploy action
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v5
         with:
-          path: ./dist
-
-      # 7️⃣ Deploy to GitHub Pages
-      - name: Deploy
-        uses: actions/deploy-pages@v1
+          branch: gh-pages  # GitHub Pages branch
+          folder: dist      # Build output folder
+          clean: true       # Remove old files before deploy
+          token: ${{ secrets.GITHUB_TOKEN }}
