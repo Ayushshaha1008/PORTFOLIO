@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "title": "Student Registration App",
+    "shortDescription": "Full-stack app using Spring Boot & Node.js",
+    "techStack": ["Java", "Spring Boot", "Node.js", "Docker"],
+    "screenshots": ["screenshots/example.png"],
+    "steps": [
+      "Setup Maven and Spring Boot",
+      "Create REST APIs",
+      "Dockerize the app",
+      "Deploy on AWS EC2"
+    ],
+    "documentation": "docs/student-app.pdf"
+  }
+]
