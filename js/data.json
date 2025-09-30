@@ -1,0 +1,21 @@
+{
+  "name": "Ayush",
+  "title": "DevOps Engineer | Cloud & Automation",
+  "about": "I build robust cloud infra, CI/CD pipelines and automations to ship reliable software faster.",
+  "contacts": {
+    "github": "https://github.com/yourusername",
+    "linkedin": "https://linkedin.com/in/yourprofile",
+    "gmail": "mailto:yourmail@gmail.com",
+    "phone": "tel:+919999999999"
+  },
+  "projects": [
+    {
+      "title": "Student Registration App",
+      "link": "projects/project1.html"
+    },
+    {
+      "title": "AWS 3-Tier Architecture",
+      "link": "projects/project2.html"
+    }
+  ]
+}
