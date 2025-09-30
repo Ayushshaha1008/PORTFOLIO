@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Ayush — DevOps Engineer</title>
+<!-- Tailwind Play CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="icon" href="assets/favicon.png" />
+
+<!-- Custom CSS -->
+<style>
+  /* Smooth fade-in for sections */
+  section {
+    animation: fadeIn 0.6s ease-in-out;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Hover effect for project cards */
+  .project-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Contact icons size fix */
+  .contact-icon {
+    width: 24px;
+    height: 24px;
+  }
+</style>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased">
+<header class="max-w-4xl mx-auto p-6 flex items-center justify-between">
+<h1 class="text-2xl font-semibold">Ayush — DevOps Engineer</h1>
+<nav class="space-x-4 text-slate-600">
+<a href="#projects" class="hover:underline">Projects</a>
+<a href="#about" class="hover:underline">About</a>
+<a href="#contact" class="hover:underline">Contact</a>
+</nav>
+</header>
+
+<main class="max-w-4xl mx-auto p-6">
+<!-- Hero -->
+<section class="bg-white rounded-2xl shadow p-6 flex gap-6 items-center">
+<img id="profile-photo" src="assets/profile.jpg" alt="Profile photo" class="w-28 h-28 object-cover rounded-full ring-2 ring-slate-200">
+<div>
+<h2 id="hero-name" class="text-xl font-bold">Ayush</h2>
+<p id="hero-title" class="text-slate-600">DevOps Engineer | Cloud & Automation</p>
+<p id="hero-tag" class="mt-3 text-slate-500">I build robust cloud infra, CI/CD pipelines and automations to ship reliable software faster.</p>
+<div class="mt-4 flex gap-3 items-center" id="contact-icons">
+<!-- social icons inserted by JS -->
+</div>
+</div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="mt-8">
+<h3 class="text-lg font-semibold mb-4">Projects</h3>
+<div id="projects-grid" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<!-- Project cards injected by JS -->
+</div>
+</section>
+
+<!-- About -->
+<section id="about" class="mt-8 bg-white rounded-2xl shadow p-6">
+<h3 class="text-lg font-semibold">About Me</h3>
+<p id="about-text" class="mt-3 text-slate-600">A concise bio about me that you can edit in admin mode. I enjoy working with cloud infra, IaC and automation.</p>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="mt-8 bg-white rounded-2xl shadow p-6">
+<h3 class="text-lg font-semibold">Contact</h3>
+<div id="contact-list" class="mt-3 space-y-2">
+<!-- Contact items injected by JS -->
+</div>
+</section>
+</main>
+
+<footer class="max-w-4xl mx-auto p-6 text-center text-sm text-slate-500">
+© <span id="footer-year"></span> Ayush — Built with ❤️
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>
